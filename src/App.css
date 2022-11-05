@@ -36,5 +36,8 @@ input:focus {
   width: 100px;
   color:  rgb(167, 208, 106);
   font: inherit;
+}
 
+.go:hover {
+  cursor: pointer;
 }
