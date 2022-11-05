@@ -1,12 +1,17 @@
 import "./App.css";
 import { useState, React } from "react";
-import axios from "axios";
-import loading from "./images/loading.svg";
+import { SpinningCircles } from "react-loading-icons";
 
 function App() {
   const axios = require("axios");
-  const [answer, updateAnswer] = useState("");
+  const [answer, updateAnswer] = useState(" ");
   const [critterQuery, updateCritter] = useState("");
+
+  window.onload = function () {
+    var input = document.getElementById("userGuess");
+    input.focus();
+    input.select();
+  };
 
   const searchCritter = (critterQuery) => {
     axios
@@ -26,16 +31,27 @@ function App() {
 
   const submitSearch = (event) => {
     event.preventDefault();
-    updateAnswer(<img src={loading} alt="loading" />);
+    updateAnswer(<SpinningCircles height="31px" />);
     searchCritter(critterQuery);
   };
   return (
     <div className="App">
-      <form onSubmit={submitSearch}>
-        is a <input onChange={updateFriend} value={critterQuery} /> a dinosaur?{" "}
-        <input type="submit" value="go ->" />
-      </form>
-      {answer}
+      <h1>
+        <form onSubmit={submitSearch}>
+          is a <br />
+          <input
+            onChange={updateFriend}
+            value={critterQuery}
+            id="userGuess"
+            // autofocus
+            // onFocus="this.select()"
+            placeholder="squirrel"
+            autocomplete="off"
+          />
+          <br />a dinosaur? <input type="submit" value="go ->" class="go" />
+        </form>
+        {answer}
+      </h1>
     </div>
   );
 }
