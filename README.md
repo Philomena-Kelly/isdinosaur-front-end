@@ -1,4 +1,4 @@
-# IsDinosaur-front-end
+# IsDinosaur Frontend
 *Click **[here](https://github.com/Philomena-Kelly/isdinosaur-back-end)** for backend.*
 <br>
 
