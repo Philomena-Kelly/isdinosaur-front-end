@@ -10,4 +10,4 @@ Created using React framework.
 
 ## Future Plans:
 * Adding features to count amount of successful searches.
-* Creating some kind of algorithm that will collect descriptions of searched turns, compare to a database of known dinosaurs, and return a dinosaur that has similar characteristics. 
+* Creating some kind of algorithm that will collect descriptions of searched terms, compare to a database of known dinosaurs, and return a dinosaur that has similar characteristics. 
